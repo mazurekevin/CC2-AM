@@ -21,13 +21,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.time.LocalDate;
 
 @SpringBootApplication
-@EnableCaching
 @EnableSwagger2
 @ComponentScan(basePackages = { "io.swagger", "io.swagger.api" , "io.swagger.configuration"})
 public class Swagger2SpringBoot implements CommandLineRunner {
 
-    @Autowired
-    V1Api api;
 
     @Override
     public void run(String... arg0) throws Exception {
