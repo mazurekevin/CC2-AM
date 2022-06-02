@@ -2,5 +2,5 @@
 
 MAZURE Kévin  
 HALIFA Halisia  
-LYS-PHORIMAVONG Jean-Luc 
+LYS-PHORIMAVONG Jean-Luc   
 CAROLE Luigi
