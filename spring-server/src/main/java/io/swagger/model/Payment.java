@@ -1,11 +1,13 @@
 package io.swagger.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.CreditCard;
+import org.springframework.data.redis.core.RedisHash;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -16,8 +18,8 @@ import javax.validation.constraints.*;
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2022-05-18T20:34:07.576Z")
 
-
-public class Payment   {
+@RedisHash("Payment")
+public class Payment implements Serializable {
   @JsonProperty("credit_card_info")
   private CreditCard creditCardInfo = null;
 
@@ -40,6 +42,7 @@ public class Payment   {
     this.currency = currency;
     this.paymentOrderId = paymentOrderId;
   }
+
 
   public Payment creditCardInfo(CreditCard creditCardInfo) {
     this.creditCardInfo = creditCardInfo;
