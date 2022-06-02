@@ -1,5 +1,6 @@
 package io.swagger.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -17,7 +18,7 @@ import javax.validation.constraints.*;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2022-05-18T20:34:07.576Z")
 
 
-public class CreditCard   {
+public class CreditCard  implements Serializable {
   @JsonProperty("card_number")
   private String cardNumber = null;
 
@@ -33,8 +34,6 @@ public class CreditCard   {
     this.expiration = expiration;
   }
 
-  public CreditCard(String cardNumber, String cvc, java.time.LocalDate of) {
-  }
 
   public CreditCard cardNumber(String cardNumber) {
     this.cardNumber = cardNumber;
